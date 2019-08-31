@@ -683,6 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a011c6748bcca4a94019d910039691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RotationAngleMax: 8
 --- !u!114 &432980954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -695,7 +696,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69aa532b9641a0b49a400e18eaf3b352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dataStream: {fileID: 11400000, guid: e4f34ab13c0603c4698d5f99614734be, type: 2}
+  _joystickDataStream: {fileID: 11400000, guid: e4f34ab13c0603c4698d5f99614734be,
+    type: 2}
+  _viewportDataStream: {fileID: 11400000, guid: d5d2a1d3149ee2e448c2e35094833bd7,
+    type: 2}
 --- !u!43 &1007764563
 Mesh:
   m_ObjectHideFlags: 0
@@ -962,6 +966,7 @@ GameObject:
   - component: {fileID: 2110441874}
   - component: {fileID: 2110441873}
   - component: {fileID: 2110441876}
+  - component: {fileID: 2110441877}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1027,13 +1032,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110441872}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.38059184, y: -0, z: -0, w: 0.9247432}
+  m_LocalPosition: {x: 5.05, y: 6.55, z: -11.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 44.741, y: 0, z: 0}
 --- !u!114 &2110441876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,3 +1052,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dataStream: {fileID: 11400000, guid: e4f34ab13c0603c4698d5f99614734be, type: 2}
+--- !u!114 &2110441877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110441872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b64aef93e6e135742a165efe7905aac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dataStream: {fileID: 11400000, guid: d5d2a1d3149ee2e448c2e35094833bd7, type: 2}

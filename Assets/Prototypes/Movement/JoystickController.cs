@@ -15,13 +15,8 @@ namespace Labrynth.Prototype
         {
             this.FixedUpdateAsObservable()
                 .Select(CaptureJoystick)
+                .Where(JoystickStateNotEqual)
                 .Subscribe(SaveJoystickState);
-        }
-
-        private void SaveJoystickState(Vector2 joystickState)
-        {
-            _dataStream.Joystick.SetValueAndForceNotify(joystickState);
-            //_dataStream.Joystick = new Vector2ReactiveProperty(joystickState);
         }
 
         private Vector2 CaptureJoystick(Unit _)
@@ -29,8 +24,18 @@ namespace Labrynth.Prototype
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
 
-            return new Vector2 (horizontal, vertical).normalized;
+            return new Vector2 (horizontal, vertical);
         }
+
+        private bool JoystickStateNotEqual(Vector2 joystick)
+        {
+            return !joystick.Equals(_dataStream.Joystick.Value);
+        }
+
+        private void SaveJoystickState(Vector2 joystickState)
+        {
+            _dataStream.Joystick.SetValueAndForceNotify(joystickState);
+        }        
     }
 }
 
