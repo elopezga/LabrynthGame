@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 432980954}
   - component: {fileID: 432980953}
   - component: {fileID: 432980955}
+  - component: {fileID: 432980956}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -718,6 +719,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &432980956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432980947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba9156d9fe6b514384d0f865d1203df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dataStream: {fileID: 11400000, guid: 72157cd10747a72468f80b538831e716, type: 2}
 --- !u!43 &1007764563
 Mesh:
   m_ObjectHideFlags: 0
@@ -985,6 +999,7 @@ GameObject:
   - component: {fileID: 1604817208}
   - component: {fileID: 1604817207}
   - component: {fileID: 1604817206}
+  - component: {fileID: 1604817211}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -1081,6 +1096,22 @@ Transform:
   m_Father: {fileID: 432980952}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1604817211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604817205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 545b7b4a0408c394fb0e19315a9406c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joystickStream: {fileID: 11400000, guid: e4f34ab13c0603c4698d5f99614734be, type: 2}
+  _platformStream: {fileID: 11400000, guid: 72157cd10747a72468f80b538831e716, type: 2}
+  _ForceMagnitude: 12
+  _MaxVelocity: 20
 --- !u!1 &2110441872
 GameObject:
   m_ObjectHideFlags: 0

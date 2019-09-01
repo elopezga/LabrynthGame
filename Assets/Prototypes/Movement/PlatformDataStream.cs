@@ -1,18 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
 
-public class PlatformDataStream : MonoBehaviour
+namespace Labrynth.Prototype
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(fileName="PlatformDataStream", menuName="Prototype/PlatformDataStream")]
+    public class PlatformDataStream : ScriptableObject
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public Vector3ReactiveProperty PlatformNormal = new Vector3ReactiveProperty(Vector3.zero);
     }
 }
