@@ -10,5 +10,6 @@ namespace Labrynth.Prototype
     public class ViewportDataStream : ScriptableObject
     {
         public Vector3ReactiveProperty Forward = new Vector3ReactiveProperty(Vector3.zero);
+        public Vector3ReactiveProperty Right = new Vector3ReactiveProperty(Vector3.zero);
     }
 }
